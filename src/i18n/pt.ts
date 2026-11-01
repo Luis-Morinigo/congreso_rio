@@ -29,6 +29,10 @@ export const pt: Dictionary = {
     unmute: 'Ativar música',
     unavailable: 'Música indisponível',
     prompt: '🎵 Ativar música',
+    tapPlayer: '🎵 Toque no player para ativar a música',
+    closePlayer: 'Fechar o player e parar a música',
+    playerLabel: 'Ai Se Eu Te Pego · Michel Teló',
+    playerTitle: 'Player do YouTube: Ai Se Eu Te Pego, Michel Teló',
   },
   hero: {
     titleLead: 'Congresso Internacional de',

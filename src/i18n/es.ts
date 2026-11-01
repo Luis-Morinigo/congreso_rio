@@ -27,6 +27,10 @@ export const es = {
     unmute: 'Activar música',
     unavailable: 'Música no disponible',
     prompt: '🎵 Activar música',
+    tapPlayer: '🎵 Toca el reproductor para activar la música',
+    closePlayer: 'Cerrar el reproductor y detener la música',
+    playerLabel: 'Ai Se Eu Te Pego · Michel Teló',
+    playerTitle: 'Reproductor de YouTube: Ai Se Eu Te Pego, Michel Teló',
   },
   hero: {
     titleLead: 'Congreso Internacional de',

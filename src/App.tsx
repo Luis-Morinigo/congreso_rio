@@ -5,7 +5,7 @@ import { Countdown } from './components/Countdown'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
-import { MusicPrompt } from './components/MusicPrompt'
+import { MusicPlayer } from './components/MusicPlayer'
 import { Rsvp } from './components/Rsvp'
 import { Speakers } from './components/Speakers'
 import { useBackgroundMusic } from './hooks/useBackgroundMusic'
@@ -33,7 +33,7 @@ export default function App() {
         <Rsvp />
       </main>
       <Footer />
-      <MusicPrompt music={music} />
+      <MusicPlayer music={music} />
     </MotionConfig>
   )
 }

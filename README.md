@@ -4,7 +4,7 @@ Landing del congreso de Río de Janeiro, Brasil, del 28 al 30 de abril de 2027. 
 
 **Sitio publicado:** https://luis-morinigo.github.io/congreso_rio/
 
-Hecha con Vite, React, TypeScript, Tailwind CSS v4, Framer Motion, lucide-react y Embla Carousel.
+Hecha con Vite, React, TypeScript, Tailwind CSS v4, Framer Motion, lucide-react, Embla Carousel y la IFrame Player API de YouTube.
 
 ## Correrlo en local
 
@@ -30,18 +30,12 @@ El idioma inicial es el del navegador (`pt` si empieza con "pt"; si no, `es`). L
 
 ## Música
 
-La playlist espera estos dos archivos, con estos nombres exactos:
+Suena "Ai Se Eu Te Pego", de Michel Teló, en loop, desde el [video oficial de YouTube](https://www.youtube.com/watch?v=hcm55lU9knw). El ID se cambia en `VIDEO_ID`, en `src/hooks/useBackgroundMusic.ts`.
 
-| Tema | Archivo |
-| --- | --- |
-| "Ai Se Eu Te Pego", Michel Teló | `public/audio/ai_se_eu_te_pego.mp3` |
-| "Magalenha", Sérgio Mendes | `public/audio/magalenha.mp3` |
-
-**Hoy no están en el repo.** Sin ellos la página funciona igual: el botón del header muestra "Música no disponible" y no aparece el aviso para activar la música. Si falta uno solo, la playlist repite el otro.
-
-Para activarla, copiá los mp3 a `public/audio/`, hacé commit y push.
-
-Este repo es público y esos temas tienen derechos de autor: al subirlos quedan descargables por cualquiera. Conviene tener en cuenta eso, o usar pistas con licencia.
+- YouTube exige un reproductor visible, así que aparece un mini reproductor flotante de 200×200 px. No se puede ocultar mientras suena.
+- Los navegadores bloquean el autoplay con sonido: la música arranca con la primera interacción. En iPhone puede hacer falta tocar el propio reproductor.
+- Cerrar el reproductor o silenciar desde el header detiene la música y se recuerda al recargar. Mientras esté silenciada, la página no se conecta con YouTube.
+- YouTube puede mostrar anuncios. Si el video deja de admitir el embed o un bloqueador impide cargarlo, el botón del header muestra "Música no disponible" y la página sigue funcionando.
 
 ## Confirmaciones de asistencia
 
@@ -56,6 +50,5 @@ src/
   hooks/        useBackgroundMusic, useCountdown, usePrefersReducedMotion
   i18n/         Diccionarios y LanguageContext
 public/
-  audio/        Los mp3 de la playlist
   og-banner.jpeg  Recorte horizontal del póster para Open Graph y Twitter
 ```
